@@ -4,178 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Segurança Digital para a Terceira Idade</title>
-    <style>
-        /* RESET E CONFIGURAÇÕES GERAIS DE ACESSIBILIDADE */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            /* Fonte legível e tamanho base ampliado */
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 22px;
-            line-height: 1.6;
-            background-color: #F4F6F9;
-            color: #1A1A1A; /* Alto contraste com o fundo */
-            padding: 20px;
-        }
-
-        /* CABEÇALHO */
-        header {
-            background-color: #003366; /* Azul escuro de alto contraste */
-            color: #FFFFFF;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.3rem;
-        }
-
-        /* CONTEÚDO PRINCIPAL */
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* AVISO DE EMERGÊNCIA / ALERTA */
-        .alerta-seguranca {
-            background-color: #FFF3CD;
-            border-left: 10px solid #856404;
-            color: #533F03;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        /* CARTÕES DE DICAS */
-        .card-dica {
-            background-color: #FFFFFF;
-            border: 3px solid #003366;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .card-dica h2 {
-            color: #003366;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #E0E0E0;
-            padding-bottom: 8px;
-        }
-
-        .card-dica ul {
-            margin-left: 25px;
-            margin-top: 10px;
-        }
-
-        .card-dica li {
-            margin-bottom: 10px;
-        }
-
-        /* DESTAQUES DE TEXTO */
-        .destaque-perigo {
-            color: #D9534F;
-            font-weight: bold;
-        }
-
-        .destaque-seguro {
-            color: #2E7D32;
-            font-weight: bold;
-        }
-
-        /* BOTÃO DE CONTATO/AJUDA */
-        .btn-ajuda {
-            display: block;
-            width: 100%;
-            background-color: #2E7D32; /* Verde chamativo */
-            color: #FFFFFF;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 30px;
-            border: 3px solid #1B5E20;
-        }
-
-        .btn-ajuda:hover, .btn-ajuda:focus {
-            background-color: #1B5E20;
-            outline: 4px solid #FFD700; /* Destaque para navegação por teclado */
-        }
-
-        /* RODAPÉ */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 1rem;
-            color: #555555;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header role="banner">
+    <header class="banner">
         <h1>Segurança na Internet</h1>
-        <p>Guia prático e seguro para o seu dia a dia digital</p>
+        <p>Sua plataforma simples e segura para aprender a navegar na internet.</p>
+        <a href="#ajuda-emergencia" class="btn-ajuda">Preciso de Ajuda Agora</a>
     </header>
 
-    <main role="main">
+    <main>
         
-        <section class="alerta-seguranca" aria-label="Aviso importante">
-            ⚠️ <strong>REGRA DE OURO:</strong> Ninguém do banco ou da polícia vai pedir sua senha ou código do celular por ligação ou mensagem.
+        <section class="secao">
+            <h2>Dicas Importantes</h2>
+            
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>1. Senhas Secretas</h3>
+                    <p>Sua senha é como a chave da sua casa. Nunca passe para ninguém por telefone ou mensagem.</p>
+                </article>
+
+                <article class="card">
+                    <h3>2. Confirme o Familiar</h3>
+                    <p>Se alguém pedir dinheiro por mensagem dizendo ser do seu da sua família, ligue diretamente para a pessoa antes de pagar.</p>
+                </article>
+
+                <article class="card">
+                    <h3>3. Links Suspeitos</h3>
+                    <p>Não clique em links que prometem prêmios ou dinheiro fácil recebidos por e-mail ou WhatsApp.</p>
+                </article>
+            </div>
         </section>
 
-        <article class="card-dica">
-            <h2>1. Cuidado com Mensagens no WhatsApp</h2>
-            <p>Golpistas usam fotos de parentes para pedir dinheiro emprestado.</p>
+        <section class="secao card-texto">
+            <h2>Seus Direitos na Internet</h2>
+            <p>Assim como no dia a dia, você possui direitos protegidos pela lei ao usar a internet:</p>
             <ul>
-                <li><span class="destaque-perigo">Sempre desconfie</span> se um filho ou neto pedir dinheiro de um número novo.</li>
-                <li><span class="destaque-seguro">O que fazer:</span> Ligue para o número antigo da pessoa para confirmar antes de enviar qualquer valor.</li>
+                <li><strong>Privacidade:</strong> Suas informações pessoais e bancárias não podem ser compartilhadas sem a sua permissão.</li>
+                <li><strong>Proteção contra Fraudes:</strong> Os bancos e empresas devem garantir a segurança das suas operações.</li>
+                <li><strong>Atendimento Acessível:</strong> Você tem o direito de receber explicações claras e suporte de fácil acesso das empresas de tecnologia.</li>
             </ul>
-        </article>
+        </section>
 
-        <article class="card-dica">
-            <h2>2. Links e Mensagens Estranhas</h2>
-            <p>Evite clicar em links recebidos por SMS ou e-mail informando que você ganhou prêmios ou que sua conta foi bloqueada.</p>
-            <ul>
-                <li>Não clique em links que prometem brindes ou dinheiro fácil.</li>
-                <li>Na dúvida, peça ajuda a uma pessoa de sua confiança.</li>
-            </ul>
-        </article>
+        <section class="secao card-alerta">
+            <h2>Como saber se estou caindo em um golpe?</h2>
+            <p class="subtitulo">Fique atento a estas atitudes suspeitas:</p>
+            
+            <div class="lista-atitudes">
+                <div class="item-alerta">
+                    <strong>Urgência Excessiva:</strong> Mensagens dizendo que sua conta será cancelada "hoje" ou que alguém precisa de dinheiro imediatamente.
+                </div>
+                <div class="item-alerta">
+                    <strong>Pedidos de Dados Pessoais:</strong> Pessoas ou empresas pedindo senhas, números de cartão ou códigos enviados por SMS.
+                </div>
+                <div class="item-alerta">
+                    <strong>Ofertas Muito Vantajosas:</strong> Prêmios de loteria que você não jogou ou produtos caros sendo vendidos por preços extremamente baixos.
+                </div>
+            </div>
+        </section>
 
-        <article class="card-dica">
-            <h2>3. Proteja suas Senhas</h2>
-            <p>Suas senhas são como a chave da sua casa.</p>
-            <ul>
-                <li>Nunca anote senhas no verso do cartão bancário.</li>
-                <li>Não informe senhas em ligações telefônicas, mesmo que digam ser do banco.</li>
-            </ul>
-        </article>
-
-        <a href="tel:190" class="btn-ajuda" role="button">
-            📞 Precisa de Ajuda? Ligue para um Familiar ou Autoridade
-        </a>
+        <section id="ajuda-emergencia" class="secao card-emergencia">
+            <h2>Central de Ajuda de Emergência</h2>
+            <p>Se você acha que caiu em um golpe ou transferiu dinheiro por engano:</p>
+            <ol>
+                <li>Avise imediatamente o seu banco para bloquear transferências.</li>
+                <li>Procure um familiar ou pessoa de sua confiança para acompanhar você.</li>
+                <li>Faça um boletim de ocorrência na delegacia mais próxima ou pela internet.</li>
+            </ol>
+        </section>
 
     </main>
 
-    <role footer>
-        <p>Desenvolvido para facilitar a navegação e promover a inclusão digital de forma simples e acessível.</p>
-    </role>
+    <footer>
+        <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
+    </footer>
 
 </body>
 </html>
+Código CSS (style.css)
+CSS
+/* Estilos Gerais e Acessibilidade */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Animação suave ao clicar no botão de ajuda */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a1a1a;
+    font-size: 22px; /* Fonte ampliada para leitura confortável */
+    line-height: 1.6;
+    padding: 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 1. Banner Inicial */
+.banner {
+    background-color: #003366; /* Azul escuro com alto contraste */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 3px solid #001a33;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Botão de Ajuda em Destaque */
+.btn-ajuda {
+    display: inline-block;
+    background-color: #d9534f; /* Vermelho visível para emergências */
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 12px;
+    border: 3px solid #b52b27;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-ajuda:hover, .btn-ajuda:focus {
+    background-color: #b52b27;
+    outline: 4px solid #ffcc00; /* Destaque visual ao focar/passar o mouse */
+}
+
+/* Estrutura das Seções */
+.secao {
+    margin-bottom: 35px;
+}
+
+.secao h2 {
+    font-size: 30px;
+    color: #003366;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #003366;
+    padding-bottom: 8px;
+}
+
+/* 2. Cards de Dicas */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 3px solid #003366;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* 3. Direitos na Internet */
+.card-texto {
+    background-color: #ffffff;
+    border: 3px solid #28a745;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card-texto h2 {
+    color: #1e7e34;
+    border-bottom-color: #1e7e34;
+}
+
+.card-texto ul {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.card-texto li {
+    margin-bottom: 15px;
+}
+
+/* 4. Como saber se estou caindo em um golpe? */
+.card-alerta {
+    background-color: #fff8e6;
+    border: 3px solid #ffc107;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card-alerta h2 {
+    color: #856404;
+    border-bottom-color: #856404;
+}
+
+.subtitulo {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.lista-atitudes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-alerta {
+    background-color: #ffffff;
+    border-left: 8px solid #d9534f;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Seção de Emergência (Alvo do Botão) */
+.card-emergencia {
+    background-color: #f8d7da;
+    border: 3px solid #d9534f;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card-emergencia h2 {
+    color: #721c24;
+    border-bottom-color: #721c24;
+}
+
+.card-emergencia ol {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.card-emergencia li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    color: #444444;
+}
