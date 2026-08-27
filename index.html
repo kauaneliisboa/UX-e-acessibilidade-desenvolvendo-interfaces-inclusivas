@@ -36,14 +36,27 @@
                 </div>
             </section>
 
+            <!-- SEÇÃO DE DIREITOS E LEIS ATUALIZADA -->
             <section class="secao card direitos">
-                <h2>Seus Direitos na Internet</h2>
-                <p>Usar a tecnologia com segurança é um direito garantido por lei. Você tem direito a:</p>
-                <ul>
-                    <li><strong>Privacidade:</strong> Suas informações pessoais e bancárias não podem ser compartilhadas sem a sua autorização.</li>
-                    <li><strong>Proteção do Banco:</strong> As instituições financeiras devem garantir a segurança das suas operações digitais.</li>
-                    <li><strong>Clareza nas Informações:</strong> As empresas devem explicar termos e serviços de forma simples e acessível.</li>
-                </ul>
+                <h2>Leis que Protegem Você na Internet</h2>
+                <p>No Brasil, existem legislações fundamentais criadas para garantir a sua segurança e privacidade no ambiente digital:</p>
+                
+                <div class="grid-leis">
+                    <article class="item-lei">
+                        <h3>1. LGPD (Lei Geral de Proteção de Dados)</h3>
+                        <p>Regula o uso de dados pessoais. Define quais informações podem ser coletadas e exige sua autorização para que empresas possam usar ou compartilhar seus dados.</p>
+                    </article>
+
+                    <article class="item-lei">
+                        <h3>2. Marco Civil da Internet</h3>
+                        <p>Estabelece seus direitos e deveres na rede, garantindo a privacidade, a liberdade de expressão e a proteção dos seus dados pessoais contra vazamentos.</p>
+                    </article>
+
+                    <article class="item-lei">
+                        <h3>3. Código de Defesa do Consumidor</h3>
+                        <p>Aplica-se às compras online. Garante o <strong>direito de arrependimento</strong>, permitindo cancelar uma compra e receber o dinheiro de volta em até 7 dias após o recebimento.</p>
+                    </article>
+                </div>
             </section>
 
             <section class="secao card golpes">
@@ -89,35 +102,35 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT INCLUÍDO DIRETAMENTE NO HTML -->
+    <!-- CÓDIGO JAVASCRIPT -->
     <script>
         // Seleção dos elementos do HTML
         let btnAjuda = document.querySelector(".banner .btn-ajuda");
         let btnFechar = document.querySelector(".btn-fechar");
         let modal = document.querySelector(".modal-fundo");
 
-        // Adição dos eventos de clique
+        // Eventos de clique
         btnAjuda.addEventListener("click", abreModal);
         btnFechar.addEventListener("click", fechaModal);
 
-        // Função para abrir o modal e alterar o botão
+        // Função para abrir o modal
         function abreModal(event) {
-            event.preventDefault(); // Evita a rolagem da página
+            event.preventDefault(); // Impede a rolagem padrão da página
             modal.style.display = "block";
             
-            // Desafio: Altera texto e visual do botão
+            // Alteração do botão quando o modal abre
             btnAjuda.textContent = "Modal Aberto";
             btnAjuda.classList.add("ativo");
         }
 
-        // Função para fechar o modal e restaurar o botão
+        // Função para fechar o modal
         function fechaModal() {
             modal.style.display = "none";
             
-            // Restaura o estado original do botão
+            // Restaura o botão ao estado original
             btnAjuda.textContent = "Preciso de Ajuda Agora";
             btnAjuda.classList.remove("ativo");
         }
     </script>
 </body>
-</html> 
+</html>
