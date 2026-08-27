@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
 }
 
-/* 1. Banner Principal */
+/* Banner Principal */
 .banner {
     background-color: #003366;
     color: #ffffff;
@@ -44,7 +44,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Botão de Ajuda */
+/* Botões */
 .btn-ajuda {
     display: inline-block;
     background-color: #d9534f;
@@ -55,7 +55,8 @@ body {
     padding: 18px 32px;
     border-radius: 12px;
     border: 3px solid #900000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -65,7 +66,7 @@ body {
     outline: 4px solid #ffcc00;
 }
 
-/* Estrutura dos Cards e Seções */
+/* Seções e Cards */
 .secao {
     margin-bottom: 35px;
 }
@@ -74,7 +75,7 @@ body {
     background-color: #ffffff;
     border-radius: 14px;
     padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .secao h2 {
@@ -82,7 +83,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* 2. Dicas Importantes */
+/* Dicas Importantes */
 .grid-dicas {
     display: flex;
     flex-direction: column;
@@ -99,7 +100,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* 3. Direitos na Internet */
+/* Direitos na Internet */
 .direitos {
     border: 3px solid #2e7d32;
 }
@@ -119,7 +120,7 @@ body {
     margin-bottom: 12px;
 }
 
-/* 4. Como saber se estou caindo em um golpe? */
+/* Golpes */
 .golpes {
     background-color: #fffde7;
     border: 3px solid #f57f17;
@@ -150,80 +151,65 @@ body {
     border-radius: 8px;
 }
 
-/* --- ESTRUTURA DO MODAL E OVERLAY --- */
+/* --- ESTILOS DO MODAL --- */
 
-/* Fundo Escuro (Overlay) */
-.modal-overlay {
-    display: none; /* Oculto por padrão */
+/* Fundo Escuro (Inicialmente escondido com display: none) */
+.modal-fundo {
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
     z-index: 1000;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Exibe o modal quando a âncora #ajuda está ativa na URL */
-.modal-overlay:target {
-    display: flex;
-}
-
-/* Estilo da Caixa do Modal */
-.emergencia.modal {
+/* Conteúdo interno do Modal */
+.modal-conteudo {
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 90%;
     width: 600px;
-    margin: 0;
     background-color: #fbe9e7;
     border: 4px solid #d9534f;
-    z-index: 1001;
+    border-radius: 14px;
+    padding: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    padding-top: 50px; /* Espaço para o botão fechar */
 }
 
-.emergencia h2 {
+.modal-conteudo h2 {
     color: #c62828;
     border-bottom: 3px solid #c62828;
     padding-bottom: 8px;
+    margin-top: 10px;
 }
 
-.emergencia ol {
-    margin-left: 25px;
-    margin-top: 15px;
+/* Espaçamento interno da lista ordenada conforme a aula */
+.modal-conteudo ol {
+    padding: 40px;
 }
 
-.emergencia li {
+.modal-conteudo li {
     margin-bottom: 12px;
     font-weight: bold;
 }
 
-/* Botão de Fechar o Modal */
+/* Botão Fechar dentro do modal */
 .btn-fechar {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #d9534f;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 14px;
-    border-radius: 8px;
+    float: right;
     font-size: 18px;
+    padding: 8px 16px;
 }
 
-.btn-fechar:hover,
-.btn-fechar:focus {
-    background-color: #c9302c;
-}
-
-/* Bloco de Contatos Rápidos */
+/* Contatos Rápidos */
 .contatos-rapidos {
     margin-top: 20px;
     padding-top: 15px;
     border-top: 2px dashed #d9534f;
+    clear: both;
 }
 
 .contatos-rapidos p {
@@ -244,7 +230,7 @@ footer {
     color: #555555;
 }
 
-/* Ajustes de Responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
     body {
         font-size: 19px;
@@ -261,11 +247,5 @@ footer {
     .btn-ajuda {
         font-size: 20px;
         padding: 14px 20px;
-        width: 100%;
-    }
-
-    .emergencia.modal {
-        width: 95%;
-        padding: 45px 15px 15px 15px;
     }
 }
