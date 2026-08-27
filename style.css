@@ -1,4 +1,4 @@
-/* Configurações Base e Acessibilidade */
+/* Reset e Estilos Globais */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -44,7 +44,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Botões */
+/* Botão de Ajuda Principal */
 .btn-ajuda {
     display: inline-block;
     background-color: #d9534f;
@@ -57,7 +57,7 @@ body {
     border: 3px solid #900000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-ajuda:hover,
@@ -66,7 +66,14 @@ body {
     outline: 4px solid #ffcc00;
 }
 
-/* Seções e Cards */
+/* Estado do botão quando o modal está aberto */
+.btn-ajuda.ativo {
+    background-color: #2e7d32;
+    border-color: #1b5e20;
+    box-shadow: none;
+}
+
+/* Estrutura das Seções */
 .secao {
     margin-bottom: 35px;
 }
@@ -83,7 +90,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* Dicas Importantes */
+/* Grid de Dicas */
 .grid-dicas {
     display: flex;
     flex-direction: column;
@@ -100,7 +107,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Direitos na Internet */
+/* Seção de Direitos e Leis */
 .direitos {
     border: 3px solid #2e7d32;
 }
@@ -111,16 +118,27 @@ body {
     padding-bottom: 8px;
 }
 
-.direitos ul {
-    margin-left: 25px;
+.grid-leis {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 15px;
 }
 
-.direitos li {
-    margin-bottom: 12px;
+.item-lei {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-left: 6px solid #2e7d32;
+    border-radius: 6px;
 }
 
-/* Golpes */
+.item-lei h3 {
+    color: #1b5e20;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+/* Seção de Golpes */
 .golpes {
     background-color: #fffde7;
     border: 3px solid #f57f17;
@@ -151,9 +169,7 @@ body {
     border-radius: 8px;
 }
 
-/* --- ESTILOS DO MODAL --- */
-
-/* Fundo Escuro (Inicialmente escondido com display: none) */
+/* Modal e Fundo Escuro */
 .modal-fundo {
     display: none;
     position: fixed;
@@ -165,7 +181,6 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Conteúdo interno do Modal */
 .modal-conteudo {
     position: relative;
     top: 50%;
@@ -187,7 +202,6 @@ body {
     margin-top: 10px;
 }
 
-/* Espaçamento interno da lista ordenada conforme a aula */
 .modal-conteudo ol {
     padding: 40px;
 }
@@ -197,23 +211,17 @@ body {
     font-weight: bold;
 }
 
-/* Botão Fechar dentro do modal */
 .btn-fechar {
     float: right;
     font-size: 18px;
     padding: 8px 16px;
 }
 
-/* Contatos Rápidos */
 .contatos-rapidos {
     margin-top: 20px;
     padding-top: 15px;
     border-top: 2px dashed #d9534f;
     clear: both;
-}
-
-.contatos-rapidos p {
-    margin-bottom: 8px;
 }
 
 .contatos-rapidos a {
@@ -230,7 +238,7 @@ footer {
     color: #555555;
 }
 
-/* Responsividade */
+/* Adaptabilidade para telas menores */
 @media (max-width: 600px) {
     body {
         font-size: 19px;
