@@ -3,67 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança Digital para a Terceira Idade</title>
+    <title>Segurança Digital para Idosos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="banner" id="topo">
-        <h1>Segurança na Internet</h1>
-        <p>Aprenda a navegar com tranquilidade e proteção no seu dia a dia.</p>
-        <a href="#ajuda" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
-    </header>
+    <!-- Conteúdo principal da página -->
+    <div class="site-container">
+        <header class="banner" id="topo">
+            <h1>Segurança na Internet</h1>
+            <p>Aprenda a navegar com tranquilidade e proteção no seu dia a dia.</p>
+            <a href="#ajuda" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
+        </header>
 
-    <main>
+        <main>
+            <section class="secao">
+                <h2>Dicas Importantes</h2>
+                <div class="grid-dicas">
+                    <article class="card dica">
+                        <h3>1. Guarde suas Senhas</h3>
+                        <p>Sua senha é pessoal. Nenhum banco ou empresa pede senhas ou códigos por telefone ou mensagem.</p>
+                    </article>
 
-        <section class="secao">
-            <h2>Dicas Importantes</h2>
-            <div class="grid-dicas">
-                <article class="card dica">
-                    <h3>1. Guarde suas Senhas</h3>
-                    <p>Sua senha é pessoal. Nenhum banco ou empresa pede senhas ou códigos por telefone ou mensagem.</p>
-                </article>
+                    <article class="card dica">
+                        <h3>2. Confirme com a Família</h3>
+                        <p>Se um parente pedir dinheiro por mensagem usando um número novo, ligue no número antigo dele antes de transferir.</p>
+                    </article>
 
-                <article class="card dica">
-                    <h3>2. Confirme com a Família</h3>
-                    <p>Se um parente pedir dinheiro por mensagem usando um número novo, ligue no número antigo dele antes de transferir.</p>
-                </article>
-
-                <article class="card dica">
-                    <h3>3. Cuidado com Links</h3>
-                    <p>Não clique em links de mensagens que prometem prêmios, dinheiro fácil ou promoções muito baratas.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="secao card direitos">
-            <h2>Seus Direitos na Internet</h2>
-            <p>Usar a tecnologia com segurança é um direito garantido por lei. Você tem direito a:</p>
-            <ul>
-                <li><strong>Privacidade:</strong> Suas informações pessoais e bancárias não podem ser compartilhadas sem a sua autorização.</li>
-                <li><strong>Proteção do Banco:</strong> As instituições financeiras devem garantir a segurança das suas operações digitais.</li>
-                <li><strong>Clareza nas Informações:</strong> As empresas devem explicar termos e serviços de forma simples e acessível.</li>
-            </ul>
-        </section>
-
-        <section class="secao card golpes">
-            <h2>Como saber se estou caindo em um golpe?</h2>
-            <p class="alerta-subtitulo">Fique em alerta se perceber alguma destas atitudes suspeitas:</p>
-
-            <div class="lista-alertas">
-                <div class="item-alerta">
-                    <strong>Pressão e Urgência:</strong> Mensagens dizendo que sua conta será bloqueada hoje ou pedindo ajuda financeira imediata.
+                    <article class="card dica">
+                        <h3>3. Cuidado com Links</h3>
+                        <p>Não clique em links de mensagens que prometem prêmios, dinheiro fácil ou promoções muito baratas.</p>
+                    </article>
                 </div>
-                <div class="item-alerta">
-                    <strong>Pedir Códigos do Celular:</strong> Pessoas desconhecidas solicitando o código que chegou no seu celular por SMS.
-                </div>
-                <div class="item-alerta">
-                    <strong>Ganhos Muito Fáceis:</strong> Promessas de prêmios de sorteios que você não participou ou rendimentos milagrosos.
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="ajuda" class="secao card emergencia" tabindex="-1">
+            <section class="secao card direitos">
+                <h2>Seus Direitos na Internet</h2>
+                <p>Usar a tecnologia com segurança é um direito garantido por lei. Você tem direito a:</p>
+                <ul>
+                    <li><strong>Privacidade:</strong> Suas informações pessoais e bancárias não podem ser compartilhadas sem a sua autorização.</li>
+                    <li><strong>Proteção do Banco:</strong> As instituições financeiras devem garantir a segurança das suas operações digitais.</li>
+                    <li><strong>Clareza nas Informações:</strong> As empresas devem explicar termos e serviços de forma simples e acessível.</li>
+                </ul>
+            </section>
+
+            <section class="secao card golpes">
+                <h2>Como saber se estou caindo em um golpe?</h2>
+                <p class="alerta-subtitulo">Fique em alerta se perceber alguma destas atitudes suspeitas:</p>
+
+                <div class="lista-alertas">
+                    <div class="item-alerta">
+                        <strong>Pressão e Urgência:</strong> Mensagens dizendo que sua conta será bloqueada hoje ou pedindo ajuda financeira imediata.
+                    </div>
+                    <div class="item-alerta">
+                        <strong>Pedir Códigos do Celular:</strong> Pessoas desconhecidas solicitando o código que chegou no seu celular por SMS.
+                    </div>
+                    <div class="item-alerta">
+                        <strong>Ganhos Muito Fáceis:</strong> Promessas de prêmios de sorteios que você não participou ou rendimentos milagrosos.
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
+        </footer>
+    </div>
+
+    <!-- Fundo Escuro (Overlay) e Modal de Emergência -->
+    <div id="ajuda" class="modal-overlay">
+        <section class="secao card emergencia modal" tabindex="-1">
+            <a href="#" class="btn-fechar" aria-label="Fechar ajuda">&times; Fechar</a>
             <h2>Central de Ajuda de Emergência</h2>
             <p><strong>Acha que caiu em um golpe ou fez um pagamento suspeito?</strong></p>
             <ol>
@@ -78,13 +88,7 @@
                 <p>Disque Direitos Humanos: <a href="tel:100">100</a></p>
             </div>
         </section>
-
-    </main>
-
-    <footer>
-        <a href="#topo" class="link-topo">Voltar ao topo da página ↑</a>
-        <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
-    </footer>
+    </div>
 
 </body>
 </html>
