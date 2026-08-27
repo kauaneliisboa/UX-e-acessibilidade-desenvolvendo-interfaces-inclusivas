@@ -44,7 +44,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Botão de Ajuda Principal */
+/* Botões */
 .btn-ajuda {
     display: inline-block;
     background-color: #d9534f;
@@ -66,14 +66,13 @@ body {
     outline: 4px solid #ffcc00;
 }
 
-/* Estado do botão quando o modal está aberto */
 .btn-ajuda.ativo {
     background-color: #2e7d32;
     border-color: #1b5e20;
     box-shadow: none;
 }
 
-/* Estrutura das Seções */
+/* Seções e Cards */
 .secao {
     margin-bottom: 35px;
 }
@@ -90,7 +89,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* Grid de Dicas */
+/* Dicas Importantes */
 .grid-dicas {
     display: flex;
     flex-direction: column;
@@ -107,7 +106,69 @@ body {
     margin-bottom: 8px;
 }
 
-/* Seção de Direitos e Leis */
+/* Nova Seção: Mensagens Suspeitas */
+.suspeitos {
+    border: 3px solid #c62828;
+    background-color: #fff8f8;
+}
+
+.suspeitos h2 {
+    color: #c62828;
+    border-bottom: 3px solid #c62828;
+    padding-bottom: 8px;
+}
+
+.suspeitos h3 {
+    color: #c62828;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.grid-exemplos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.exemplo-box {
+    background-color: #ffffff;
+    border: 2px dashed #d9534f;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tag-mensagem {
+    display: inline-block;
+    background-color: #d9534f;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.texto-mensagem {
+    font-style: italic;
+    color: #333333;
+}
+
+.lista-sinais {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-sinais li {
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 6px solid #c62828;
+    border-radius: 4px;
+}
+
+/* Direitos na Internet */
 .direitos {
     border: 3px solid #2e7d32;
 }
@@ -138,7 +199,7 @@ body {
     margin-bottom: 6px;
 }
 
-/* Seção de Golpes */
+/* Golpes */
 .golpes {
     background-color: #fffde7;
     border: 3px solid #f57f17;
@@ -238,7 +299,7 @@ footer {
     color: #555555;
 }
 
-/* Adaptabilidade para telas menores */
+/* Responsividade */
 @media (max-width: 600px) {
     body {
         font-size: 19px;
