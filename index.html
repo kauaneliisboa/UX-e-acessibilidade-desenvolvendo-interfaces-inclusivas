@@ -4,197 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segurança Digital para a Terceira Idade</title>
-    <style>
-        /* Configurações Base e Acessibilidade */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth; /* Rolagem suave até a seção de ajuda */
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f7f6;
-            color: #111111;
-            font-size: 22px; /* Fonte ampliada para facilidade de leitura */
-            line-height: 1.6;
-            padding: 20px 10px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* 1. Banner Principal */
-        .banner {
-            background-color: #003366; /* Azul escuro com alto contraste */
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            border: 4px solid #001a33;
-        }
-
-        .banner h1 {
-            font-size: 36px;
-            margin-bottom: 12px;
-        }
-
-        .banner p {
-            font-size: 24px;
-            margin-bottom: 25px;
-        }
-
-        /* Botão de Ajuda */
-        .btn-ajuda {
-            display: inline-block;
-            background-color: #d9534f; /* Vermelho em destaque */
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 18px 32px;
-            border-radius: 12px;
-            border: 3px solid #900000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        .btn-ajuda:hover,
-        .btn-ajuda:focus {
-            background-color: #c9302c;
-            outline: 4px solid #ffcc00;
-        }
-
-        /* Estrutura dos Cards e Seções */
-        .secao {
-            margin-bottom: 35px;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border-radius: 14px;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .secao h2 {
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
-
-        /* 2. Dicas Importantes */
-        .grid-dicas {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .dica {
-            border: 3px solid #003366;
-        }
-
-        .dica h3 {
-            color: #003366;
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        /* 3. Direitos na Internet */
-        .direitos {
-            border: 3px solid #2e7d32;
-        }
-
-        .direitos h2 {
-            color: #2e7d32;
-            border-bottom: 3px solid #2e7d32;
-            padding-bottom: 8px;
-        }
-
-        .direitos ul {
-            margin-left: 25px;
-            margin-top: 15px;
-        }
-
-        .direitos li {
-            margin-bottom: 12px;
-        }
-
-        /* 4. Como saber se estou caindo em um golpe? */
-        .golpes {
-            background-color: #fffde7;
-            border: 3px solid #f57f17;
-        }
-
-        .golpes h2 {
-            color: #f57f17;
-            border-bottom: 3px solid #f57f17;
-            padding-bottom: 8px;
-        }
-
-        .alerta-subtitulo {
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .lista-alertas {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .item-alerta {
-            background-color: #ffffff;
-            border-left: 8px solid #d9534f;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        /* Seção de Emergência (Alvo do Botão de Ajuda) */
-        .emergencia {
-            background-color: #fbe9e7;
-            border: 4px solid #d9534f;
-        }
-
-        .emergencia:focus {
-            outline: none; /* Remove o contorno ao focar via âncora */
-        }
-
-        .emergencia h2 {
-            color: #c62828;
-            border-bottom: 3px solid #c62828;
-            padding-bottom: 8px;
-        }
-
-        .emergencia ol {
-            margin-left: 25px;
-            margin-top: 15px;
-        }
-
-        .emergencia li {
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 18px;
-            color: #555555;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="banner">
+    <header class="banner" id="topo">
         <h1>Segurança na Internet</h1>
         <p>Aprenda a navegar com tranquilidade e proteção no seu dia a dia.</p>
         <a href="#ajuda" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
@@ -257,11 +71,18 @@
                 <li>Avise um familiar ou pessoa de confiança para acompanhar você.</li>
                 <li>Faça um Boletim de Ocorrência (BO) na delegacia mais próxima ou pela internet.</li>
             </ol>
+
+            <div class="contatos-rapidos">
+                <p><strong>Telefones úteis:</strong></p>
+                <p>Polícia Militar: <a href="tel:190">190</a></p>
+                <p>Disque Direitos Humanos: <a href="tel:100">100</a></p>
+            </div>
         </section>
 
     </main>
 
     <footer>
+        <a href="#topo" class="link-topo">Voltar ao topo da página ↑</a>
         <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
     </footer>
 
