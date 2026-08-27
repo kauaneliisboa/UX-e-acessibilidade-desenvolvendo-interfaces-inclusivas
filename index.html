@@ -8,11 +8,13 @@
 </head>
 <body>
 
-    <!-- Conteúdo principal da página -->
+    <!-- 1. ELEMENTO QUE ENVOLVE TODO O CONTEÚDO DA PÁGINA -->
     <div class="site-container">
+        
         <header class="banner" id="topo">
             <h1>Segurança na Internet</h1>
             <p>Aprenda a navegar com tranquilidade e proteção no seu dia a dia.</p>
+            <!-- O botão aponta para a âncora #ajuda -->
             <a href="#ajuda" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
         </header>
 
@@ -68,10 +70,12 @@
         <footer>
             <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
         </footer>
+
     </div>
 
-    <!-- Fundo Escuro (Overlay) e Modal de Emergência -->
+    <!-- 2. ELEMENTO QUE ESCURECE O FUNDO (OVERLAY) E CONTÉM O MODAL SOBREPOSTO -->
     <div id="ajuda" class="modal-overlay">
+        <!-- O modal fica posicionado dentro e acima da overlay -->
         <section class="secao card emergencia modal" tabindex="-1">
             <a href="#" class="btn-fechar" aria-label="Fechar ajuda">&times; Fechar</a>
             <h2>Central de Ajuda de Emergência</h2>
