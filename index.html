@@ -8,14 +8,11 @@
 </head>
 <body>
 
-    <!-- 1. ELEMENTO QUE ENVOLVE TODO O CONTEÚDO DA PÁGINA -->
     <div class="site-container">
-        
-        <header class="banner" id="topo">
+        <header class="banner">
             <h1>Segurança na Internet</h1>
             <p>Aprenda a navegar com tranquilidade e proteção no seu dia a dia.</p>
-            <!-- O botão aponta para a âncora #ajuda -->
-            <a href="#ajuda" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
+            <a href="#" class="btn-ajuda" role="button">Preciso de Ajuda Agora</a>
         </header>
 
         <main>
@@ -70,14 +67,12 @@
         <footer>
             <p>Aplicativo de Apoio ao Idoso &copy; 2026</p>
         </footer>
-
     </div>
 
-    <!-- 2. ELEMENTO QUE ESCURECE O FUNDO (OVERLAY) E CONTÉM O MODAL SOBREPOSTO -->
-    <div id="ajuda" class="modal-overlay">
-        <!-- O modal fica posicionado dentro e acima da overlay -->
-        <section class="secao card emergencia modal" tabindex="-1">
-            <a href="#" class="btn-fechar" aria-label="Fechar ajuda">&times; Fechar</a>
+    <!-- ESTRUTURA DO MODAL -->
+    <div class="modal-fundo">
+        <div class="modal-conteudo">
+            <button class="btn-ajuda btn-fechar">Fechar</button>
             <h2>Central de Ajuda de Emergência</h2>
             <p><strong>Acha que caiu em um golpe ou fez um pagamento suspeito?</strong></p>
             <ol>
@@ -91,8 +86,10 @@
                 <p>Polícia Militar: <a href="tel:190">190</a></p>
                 <p>Disque Direitos Humanos: <a href="tel:100">100</a></p>
             </div>
-        </section>
+        </div>
     </div>
 
+    <!-- VINCULO COM O ARQUIVO SCRIPT.JS -->
+    <script src="script.js"></script>
 </body>
 </html>
