@@ -1,0 +1,227 @@
+/* Configurações Base e Acessibilidade */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    color: #111111;
+    font-size: 22px;
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 1. Banner Principal */
+.banner {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 4px solid #001a33;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Botão de Ajuda */
+.btn-ajuda {
+    display: inline-block;
+    background-color: #d9534f;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 32px;
+    border-radius: 12px;
+    border: 3px solid #900000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-ajuda:hover,
+.btn-ajuda:focus {
+    background-color: #c9302c;
+    outline: 4px solid #ffcc00;
+}
+
+/* Estrutura dos Cards e Seções */
+.secao {
+    margin-bottom: 35px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.secao h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+/* 2. Dicas Importantes */
+.grid-dicas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dica {
+    border: 3px solid #003366;
+}
+
+.dica h3 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* 3. Direitos na Internet */
+.direitos {
+    border: 3px solid #2e7d32;
+}
+
+.direitos h2 {
+    color: #2e7d32;
+    border-bottom: 3px solid #2e7d32;
+    padding-bottom: 8px;
+}
+
+.direitos ul {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.direitos li {
+    margin-bottom: 12px;
+}
+
+/* 4. Como saber se estou caindo em um golpe? */
+.golpes {
+    background-color: #fffde7;
+    border: 3px solid #f57f17;
+}
+
+.golpes h2 {
+    color: #f57f17;
+    border-bottom: 3px solid #f57f17;
+    padding-bottom: 8px;
+}
+
+.alerta-subtitulo {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.lista-alertas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-alerta {
+    background-color: #ffffff;
+    border-left: 8px solid #d9534f;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Seção de Emergência (Alvo do Botão de Ajuda) */
+.emergencia {
+    background-color: #fbe9e7;
+    border: 4px solid #d9534f;
+}
+
+.emergencia:focus {
+    outline: none;
+}
+
+.emergencia h2 {
+    color: #c62828;
+    border-bottom: 3px solid #c62828;
+    padding-bottom: 8px;
+}
+
+.emergencia ol {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.emergencia li {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+/* Bloco de Contatos Rápidos */
+.contatos-rapidos {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #d9534f;
+}
+
+.contatos-rapidos p {
+    margin-bottom: 8px;
+}
+
+.contatos-rapidos a {
+    color: #c62828;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #555555;
+}
+
+.link-topo {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Ajustes de Responsividade para Telas Menores */
+@media (max-width: 600px) {
+    body {
+        font-size: 19px;
+    }
+    .banner h1 {
+        font-size: 28px;
+    }
+    .banner p {
+        font-size: 20px;
+    }
+    .btn-ajuda {
+        font-size: 20px;
+        padding: 14px 20px;
+        width: 100%;
+    }
+}
