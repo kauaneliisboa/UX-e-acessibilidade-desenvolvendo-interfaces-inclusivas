@@ -18,7 +18,7 @@ body {
     padding: 20px 10px;
 }
 
-main {
+.site-container {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -55,7 +55,7 @@ main {
     padding: 18px 32px;
     border-radius: 12px;
     border: 3px solid #900000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -74,7 +74,7 @@ main {
     background-color: #ffffff;
     border-radius: 14px;
     padding: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .secao h2 {
@@ -150,14 +150,38 @@ main {
     border-radius: 8px;
 }
 
-/* Seção de Emergência (Alvo do Botão de Ajuda) */
-.emergencia {
-    background-color: #fbe9e7;
-    border: 4px solid #d9534f;
+/* --- ESTRUTURA DO MODAL E OVERLAY --- */
+
+/* Fundo Escuro (Overlay) */
+.modal-overlay {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
-.emergencia:focus {
-    outline: none;
+/* Exibe o modal quando a âncora #ajuda está ativa na URL */
+.modal-overlay:target {
+    display: flex;
+}
+
+/* Estilo da Caixa do Modal */
+.emergencia.modal {
+    position: relative;
+    max-width: 90%;
+    width: 600px;
+    margin: 0;
+    background-color: #fbe9e7;
+    border: 4px solid #d9534f;
+    z-index: 1001;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding-top: 50px; /* Espaço para o botão fechar */
 }
 
 .emergencia h2 {
@@ -174,6 +198,25 @@ main {
 .emergencia li {
     margin-bottom: 12px;
     font-weight: bold;
+}
+
+/* Botão de Fechar o Modal */
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d9534f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn-fechar:hover,
+.btn-fechar:focus {
+    background-color: #c9302c;
 }
 
 /* Bloco de Contatos Rápidos */
@@ -201,27 +244,28 @@ footer {
     color: #555555;
 }
 
-.link-topo {
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #003366;
-    font-weight: bold;
-}
-
-/* Ajustes de Responsividade para Telas Menores */
+/* Ajustes de Responsividade */
 @media (max-width: 600px) {
     body {
         font-size: 19px;
     }
+
     .banner h1 {
         font-size: 28px;
     }
+
     .banner p {
         font-size: 20px;
     }
+
     .btn-ajuda {
         font-size: 20px;
         padding: 14px 20px;
         width: 100%;
+    }
+
+    .emergencia.modal {
+        width: 95%;
+        padding: 45px 15px 15px 15px;
     }
 }
