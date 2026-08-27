@@ -89,7 +89,35 @@
         </div>
     </div>
 
-    <!-- VINCULO COM O ARQUIVO SCRIPT.JS -->
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT INCLUÍDO DIRETAMENTE NO HTML -->
+    <script>
+        // Seleção dos elementos do HTML
+        let btnAjuda = document.querySelector(".banner .btn-ajuda");
+        let btnFechar = document.querySelector(".btn-fechar");
+        let modal = document.querySelector(".modal-fundo");
+
+        // Adição dos eventos de clique
+        btnAjuda.addEventListener("click", abreModal);
+        btnFechar.addEventListener("click", fechaModal);
+
+        // Função para abrir o modal e alterar o botão
+        function abreModal(event) {
+            event.preventDefault(); // Evita a rolagem da página
+            modal.style.display = "block";
+            
+            // Desafio: Altera texto e visual do botão
+            btnAjuda.textContent = "Modal Aberto";
+            btnAjuda.classList.add("ativo");
+        }
+
+        // Função para fechar o modal e restaurar o botão
+        function fechaModal() {
+            modal.style.display = "none";
+            
+            // Restaura o estado original do botão
+            btnAjuda.textContent = "Preciso de Ajuda Agora";
+            btnAjuda.classList.remove("ativo");
+        }
+    </script>
 </body>
-</html>
+</html> 
