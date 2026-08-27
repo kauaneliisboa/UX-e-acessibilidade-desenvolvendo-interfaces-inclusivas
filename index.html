@@ -8,6 +8,14 @@
 </head>
 <body>
 
+    <!-- MENU DE ACESSIBILIDADE FIXO NO TOPO -->
+    <nav class="barra-acessibilidade" aria-label="Controles de Acessibilidade">
+        <button class="botao-controle" onclick="alterarFonte(2)" title="Aumentar texto">A+ Aumentar</button>
+        <button class="botao-controle" onclick="alterarFonte(-2)" title="Diminuir texto">A- Diminuir</button>
+        <button class="botao-controle botao-leitura" onclick="lerTexto()" id="btn-voz">🔊 Ouvir Página</button>
+        <button class="botao-controle" onclick="pararLeitura()">⏹️ Parar</button>
+    </nav>
+
     <div class="site-container">
         <header class="banner">
             <h1>Segurança na Internet</h1>
@@ -36,7 +44,6 @@
                 </div>
             </section>
 
-            <!-- NOVA SEÇÃO: EXEMPLOS DE MENSAGENS E SINAIS DE ALERTA -->
             <section class="secao card suspeitos">
                 <h2>Exemplos de Mensagens Suspeitas</h2>
                 <p>Veja como os golpistas costumam escrever para tentar enganar as pessoas:</p>
@@ -44,12 +51,12 @@
                 <div class="grid-exemplos">
                     <article class="exemplo-box">
                         <span class="tag-mensagem">Exemplo 1: Falso Pix</span>
-                        <p class="texto-mensagem">"Parabéns! Você ganhou R$ 2.000 no Pix. Resgate clicando no link abaixo: <u>http://pix-facil-resgate.com</u>"</p>
+                        <p class="texto-mensagem">"Parabéns! Você ganhou R$ 2.000 no Pix. Resgate clicando no link abaixo: http://pix-facil-resgate.com"</p>
                     </article>
 
                     <article class="exemplo-box">
                         <span class="tag-mensagem">Exemplo 2: Falsa Compra</span>
-                        <p class="texto-mensagem">"Sua compra de R$ 53.000 foi aprovada. Se você não reconhece, clique no link abaixo para cancelar: <u>http://banco-cancelar-compra.net</u>"</p>
+                        <p class="texto-mensagem">"Sua compra de R$ 53.000 foi aprovada. Se você não reconhece, clique no link abaixo para cancelar: http://banco-cancelar-compra.net"</p>
                     </article>
                 </div>
 
@@ -106,7 +113,7 @@
         </footer>
     </div>
 
-    <!-- ESTRUTURA DO MODAL -->
+    <!-- MODAL -->
     <div class="modal-fundo">
         <div class="modal-conteudo">
             <button class="btn-ajuda btn-fechar">Fechar</button>
@@ -126,8 +133,9 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT INTEGRADO -->
     <script>
+        // Modal
         let btnAjuda = document.querySelector(".banner .btn-ajuda");
         let btnFechar = document.querySelector(".btn-fechar");
         let modal = document.querySelector(".modal-fundo");
@@ -146,6 +154,34 @@
             modal.style.display = "none";
             btnAjuda.textContent = "Preciso de Ajuda Agora";
             btnAjuda.classList.remove("ativo");
+        }
+
+        // Funções de Acessibilidade
+        let tamanhoFonteAtual = 22; // Tamanho base em pixels
+
+        function alterarFonte(delta) {
+            tamanhoFonteAtual += delta;
+            // Limita o tamanho mínimo em 16px e máximo em 36px
+            if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
+            if (tamanhoFonteAtual > 36) tamanhoFonteAtual = 36;
+            document.body.style.fontSize = tamanhoFonteAtual + "px";
+        }
+
+        // Leitura de Voz em Português
+        let sintetizador = window.speechSynthesis;
+
+        function lerTexto() {
+            pararLeitura();
+            let textoParaLer = document.querySelector(".site-container").innerText;
+            let mensagem = new SpeechSynthesisUtterance(textoParaLer);
+            mensagem.lang = "pt-BR";
+            sintetizador.speak(mensagem);
+        }
+
+        function pararLeitura() {
+            if (sintetizador.speaking) {
+                sintetizador.cancel();
+            }
         }
     </script>
 </body>
