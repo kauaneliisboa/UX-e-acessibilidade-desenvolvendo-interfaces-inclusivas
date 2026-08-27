@@ -36,7 +36,31 @@
                 </div>
             </section>
 
-            <!-- SEÇÃO DE DIREITOS E LEIS ATUALIZADA -->
+            <!-- NOVA SEÇÃO: EXEMPLOS DE MENSAGENS E SINAIS DE ALERTA -->
+            <section class="secao card suspeitos">
+                <h2>Exemplos de Mensagens Suspeitas</h2>
+                <p>Veja como os golpistas costumam escrever para tentar enganar as pessoas:</p>
+
+                <div class="grid-exemplos">
+                    <article class="exemplo-box">
+                        <span class="tag-mensagem">Exemplo 1: Falso Pix</span>
+                        <p class="texto-mensagem">"Parabéns! Você ganhou R$ 2.000 no Pix. Resgate clicando no link abaixo: <u>http://pix-facil-resgate.com</u>"</p>
+                    </article>
+
+                    <article class="exemplo-box">
+                        <span class="tag-mensagem">Exemplo 2: Falsa Compra</span>
+                        <p class="texto-mensagem">"Sua compra de R$ 53.000 foi aprovada. Se você não reconhece, clique no link abaixo para cancelar: <u>http://banco-cancelar-compra.net</u>"</p>
+                    </article>
+                </div>
+
+                <h3>Sinais de Alerta (Elementos de Risco)</h3>
+                <ul class="lista-sinais">
+                    <li><strong>1. Urgência ou Ofertas Bomba:</strong> Promessas de dinheiro muito fácil ou ameaças de cobranças absurdas para fazer você agir sem pensar.</li>
+                    <li><strong>2. Links Estranhos e Desconhecidos:</strong> Endereços de sites que não pertencem aos canais oficiais do seu banco ou loja.</li>
+                    <li><strong>3. Pedidos de Ação Imediata:</strong> Solicitações para "clicar agora", "cancelar urgente" ou "informar senhas e códigos".</li>
+                </ul>
+            </section>
+
             <section class="secao card direitos">
                 <h2>Leis que Protegem Você na Internet</h2>
                 <p>No Brasil, existem legislações fundamentais criadas para garantir a sua segurança e privacidade no ambiente digital:</p>
@@ -102,32 +126,24 @@
         </div>
     </div>
 
-    <!-- CÓDIGO JAVASCRIPT -->
+    <!-- JAVASCRIPT -->
     <script>
-        // Seleção dos elementos do HTML
         let btnAjuda = document.querySelector(".banner .btn-ajuda");
         let btnFechar = document.querySelector(".btn-fechar");
         let modal = document.querySelector(".modal-fundo");
 
-        // Eventos de clique
         btnAjuda.addEventListener("click", abreModal);
         btnFechar.addEventListener("click", fechaModal);
 
-        // Função para abrir o modal
         function abreModal(event) {
-            event.preventDefault(); // Impede a rolagem padrão da página
+            event.preventDefault();
             modal.style.display = "block";
-            
-            // Alteração do botão quando o modal abre
             btnAjuda.textContent = "Modal Aberto";
             btnAjuda.classList.add("ativo");
         }
 
-        // Função para fechar o modal
         function fechaModal() {
             modal.style.display = "none";
-            
-            // Restaura o botão ao estado original
             btnAjuda.textContent = "Preciso de Ajuda Agora";
             btnAjuda.classList.remove("ativo");
         }
