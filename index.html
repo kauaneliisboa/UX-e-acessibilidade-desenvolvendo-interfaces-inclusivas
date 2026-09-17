@@ -10,10 +10,9 @@
 
     <!-- MENU DE ACESSIBILIDADE FIXO NO TOPO -->
     <nav class="barra-acessibilidade" aria-label="Controles de Acessibilidade">
-        <button class="botao-controle" onclick="alterarFonte(2)" title="Aumentar texto">A+ Aumentar</button>
-        <button class="botao-controle" onclick="alterarFonte(-2)" title="Diminuir texto">A- Diminuir</button>
-        <button class="botao-controle botao-leitura" onclick="lerTexto()" id="btn-voz">🔊 Ouvir Página</button>
-        <button class="botao-controle" onclick="pararLeitura()">⏹️ Parar</button>
+        <button id="btnAumentaTexto" class="botao-controle" title="Aumentar texto">A+ Aumentar</button>
+        <button id="btnDiminuiTexto" class="botao-controle" title="Diminuir texto">A- Diminuir</button>
+        <button id="btn-voz" class="botao-controle botao-leitura">🔊 Ouvir Página</button>
     </nav>
 
     <div class="site-container">
@@ -156,32 +155,25 @@
             btnAjuda.classList.remove("ativo");
         }
 
-        // Funções de Acessibilidade
-        let tamanhoFonteAtual = 22; // Tamanho base em pixels
+        // TAMANHO DE FONTES
+        let tamanhoFonteAtual = 16;
+        const valorAdicionado = 2;
+        const valorSubtraido = 2;
 
-        function alterarFonte(delta) {
-            tamanhoFonteAtual += delta;
-            // Limita o tamanho mínimo em 16px e máximo em 36px
-            if (tamanhoFonteAtual < 16) tamanhoFonteAtual = 16;
-            if (tamanhoFonteAtual > 36) tamanhoFonteAtual = 36;
-            document.body.style.fontSize = tamanhoFonteAtual + "px";
+        let btnAumentaFonte = document.getElementById("btnAumentaTexto");
+        let btnDiminuiFonte = document.getElementById("btnDiminuiTexto");
+
+        btnAumentaFonte.addEventListener("click", aumentaFonte);
+        btnDiminuiFonte.addEventListener("click", diminuiFonte);
+
+        function aumentaFonte() {
+            tamanhoFonteAtual = tamanhoFonteAtual + valorAdicionado;
+            document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
         }
 
-        // Leitura de Voz em Português
-        let sintetizador = window.speechSynthesis;
-
-        function lerTexto() {
-            pararLeitura();
-            let textoParaLer = document.querySelector(".site-container").innerText;
-            let mensagem = new SpeechSynthesisUtterance(textoParaLer);
-            mensagem.lang = "pt-BR";
-            sintetizador.speak(mensagem);
-        }
-
-        function pararLeitura() {
-            if (sintetizador.speaking) {
-                sintetizador.cancel();
-            }
+        function diminuiFonte() {
+            tamanhoFonteAtual = tamanhoFonteAtual - valorSubtraido;
+            document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
         }
     </script>
 </body>
