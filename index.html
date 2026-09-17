@@ -160,6 +160,10 @@
         const valorAdicionado = 2;
         const valorSubtraido = 2;
 
+        // Limites para manter a página legível
+        const tamanhoMaximo = 24;
+        const tamanhoMinimo = 12;
+
         let btnAumentaFonte = document.getElementById("btnAumentaTexto");
         let btnDiminuiFonte = document.getElementById("btnDiminuiTexto");
 
@@ -167,13 +171,17 @@
         btnDiminuiFonte.addEventListener("click", diminuiFonte);
 
         function aumentaFonte() {
-            tamanhoFonteAtual = tamanhoFonteAtual + valorAdicionado;
-            document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+            if (tamanhoFonteAtual < tamanhoMaximo) {
+                tamanhoFonteAtual = tamanhoFonteAtual + valorAdicionado;
+                document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+            }
         }
 
         function diminuiFonte() {
-            tamanhoFonteAtual = tamanhoFonteAtual - valorSubtraido;
-            document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+            if (tamanhoFonteAtual > tamanhoMinimo) {
+                tamanhoFonteAtual = tamanhoFonteAtual - valorSubtraido;
+                document.documentElement.style.fontSize = `${tamanhoFonteAtual}px`;
+            }
         }
     </script>
 </body>
